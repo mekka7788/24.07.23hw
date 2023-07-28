@@ -1,24 +1,30 @@
-const row = document.querySelector('.row');
-const select = document.querySelector('#select')
-const handleGetFlags = ()=>{
-    fetch (`https://restcountries.com/v3.1/region/${select.value}`)
-        .then(res => res.json())
-        .then (data=> {
+// setTimeout(() => {
+//     console.log(6666)
+// },2000)
+// console.log(123)
+// console.log(6666)
+// new Promise( (resolve, reject) =>{
+//     console.log(111)
+//     resolve()
+// }).then(r => {
+//     console.log(22, r)})
+// console.log(123)
+// console.log(444)
+//
+// const foo = async () =>{
+//     const bar = setTimeout( () => {
+//        return('foo')
+//     },300)
+//     console.log('foo')
+//     console.log('bar')
+// }
+// // foo()
+// const user = {
+//     name: 'Mango' ,
+//     age: 20,
+// }
+// const  {name, age} = user
+// console.log(name,'name')
+// console.log(age, 'age')
 
-        data.map(country => {
-            row.innerHTML +=`
-            <div class='col-4'>
-            <div class="box">
-            <img src="${country.flags.png}" alt="">
-            <h3>${country.name.official}</h3>
-            <p>${country.name.capital}</p>
-            <p>${country.population}</p>
 
-</div>`
-        })
-    })
-}
-select.addEventListener('change',  ()=> {
-    row.innerHTML = ''
-    handleGetFlags()
-})

@@ -1,28 +1,19 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.box img {
-width: 380px;
-    height: 180px;
-
-}
-a{
- text-decoration: none;
-}
-
-
-.box {
+.img-wrapper {
+    border: 5px solid lightsalmon;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-    background-color: #b9b9b999;
-    padding: 10px;
-    gap: 12px;
+    justify-content: center;
+    border-radius: 15px;
+
 
 }
-.col-4 {
-   padding-bottom: 10px;
+.col-3 {
+    margin-bottom: 20px ;
+}
+.container {
+    max-width: 900px;
+
+}
+.select-btn {
+    margin-bottom: 15px;
+    border-radius: 10px;
 }
